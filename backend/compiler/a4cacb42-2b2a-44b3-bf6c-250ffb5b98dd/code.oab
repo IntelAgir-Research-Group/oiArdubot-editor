@@ -1,0 +1,27 @@
+Variaveis
+Numero sensor <- A5;
+Numero led1 <- 10;
+Numero led2 <- 11;
+Numero luminosidade <- 0;
+CONSTANTE Numero LED3 <- 13;
+
+Inicio
+luminosidade <- lerAnalogica(sensor);
+
+se luminosidade < 750 entao
+    ligar(DIGITAL, led2);
+    desligar(DIGITAL, led1);
+senao
+    ligar(DIGITAL, led1);
+    desligar(DIGITAL, led2);
+fimse
+
+se luminosidade >= 600 entao
+    ligar(DIGITAL, led3);
+    desligar(DIGITAL, led4);
+    ligar(DIGITAL, led5);
+fimse
+
+ligar(DIGITAL, led7);
+desligar(DIGITAL, led899);
+Fim
